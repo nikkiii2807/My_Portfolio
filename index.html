@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I am <span>Nikki Mehta</span></h1>
+                <p class="tagline">Aspiring AI and Data Science Engineer</p>
+                 <p class="mission">Dedicated to leveraging technology for positive societal impact and continuous innovation</p>
+            </div>
+        </div>
+   </div>
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about1">
+                <img src="about.jpg">
+            </div>
+            <div class="about2">
+                <h1 class="sub">About Me</h1>
+                <p>
+                    I am currently pursuing my undergraduate studies in Engineering at DJ Sanghvi College of Engineering. My primary focus is on Artificial Intelligence and Data Science, areas that fascinate me with their potential to drive innovation and solve complex problems. With a commendable CGPA of 9.19, I am committed to maintaining excellence in my academic pursuits.
+                </p>
+                <p>
+                    Beyond academics, I am an avid sports enthusiast, particularly passionate about cricket and tennis. Engaging in sports not only keeps me physically active but also instills values of teamwork, discipline, and perseverance.
+                </p>
+                <p>
+                    Apart from sports, I indulge in creative activities like drawing and dancing during my leisure time. These hobbies provide me with a creative outlet, allowing me to unwind and express myself beyond the realms of academia.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Hobbies')">Hobbies</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML <br>CSS<br>Javascript</li>
+                        <li><span>Programming Languages</span><br>C<br>Java<br>Python</li>
+                        <li><span>Database Management</span><br>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2022-Currently</span><br>DJ.Sanghvi College Of Engineering<br><br>SGPA:<br>Sem-1:-9.0<br>Sem-2:-9.48<br>Sem-3:-9.10  </li>
+                        <li><span>2021-2022</span><br>T.P.Bhatia College Of Engineering<br>HSC-85%</li>
+                        <li><span>2008-2020</span><br>Carmel Of St. Joseph School<br>SSC-92%</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Hobbies">
+                    <ul>
+                        <li><span>Creativity</span><br>Drawing<br>Painting</li>
+                        <li><span>Sports</span><br>Cricket<br>Tennis<br>Badminton</li>
+                      
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="Portfolio">
+    <div class="container">
+        <h1 class="sub">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="amazon.png">
+                <div class="layer">
+                    <h3>Amazon Clone</h3>
+                    <a href="https://nikkiii2807.github.io/Amazon/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="learning.png">
+                <div class="layer">
+                    <h3>Learning Rocks-Personalized studying website</h3>
+                    <a href="https://nikkiii2807.github.io/my-website1/Home_WEBSITE.html"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="weather-app.webp">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+  
+   <div id="contact">
+    <div class="contact">
+    <h2>Contact Me</h2>
+    <ul>
+        <li><a href="https://wa.me/your_whatsapp_number"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/your_instagram_username"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+        <li><a href="https://www.facebook.com/your_facebook_profile"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+        <li><a href="mailto:your_email@example.com"><i class="fa-solid fa-envelope"></i>Gmail</a></li>
+    </ul></div>
+</div>
+
+
+   <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+        
+
+       
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+       
+   </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(finals.png);
+    background-size: cover;
+    background-position: right;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/*.header-text{
+    margin-top: 30%;
+    font-size: 30px;
+}*/
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20%;
+}
+.header-text h1 span{
+    color: #ff004f ;
+}
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+   
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.about1{
+    flex-basis: 35%;
+}
+.about1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about2{
+    flex-basis:60%;
+}
+.about2 p{
+    color: white;
+}
+.sub{
+    color: white;
+    font-size: 60px;
+    font-weight: 600px;
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0px 40px;
+}
+.tab-links{
+    margin-right:50px ;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    justify-content: space-evenly;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.tab-links.active-link::after{
+    width:50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 18px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: trasnform 0.5s;
+}
+.layer{
+    width:100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px ;
+}
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: height 0.5s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+
+}
+
+#contact {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact ul li a {
+    color: #ff004f;
+    text-decoration: none;
+}
+
+.contact ul li a:hover {
+    text-decoration: underline;
+}
+.contact ul li i{
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) 
+{
+ 
+    #header {
+        background-image: url(phone.png);
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start on smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .header-text {
+        max-width: 100%; /* Allow text to occupy full width on smaller screens */
+        text-align: left; /* Align text to the left on smaller screens */
+        margin-bottom: 20px; /* Add margin for spacing between text and image */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 10px; /* Reduce margin for smaller screens */
+    }
+
+    .header-text h1 {
+        font-size: 40px; /* Decrease font size for smaller screens */
+    }
+
+    .about1,
+    .about2 {
+        flex-basis: 100%; /* Make about sections take full width on smaller screens */
+        margin-bottom: 20px; /* Add some space between about sections */
+    }
+
+    .tab-links {
+        margin-right: 20px; /* Reduce margin between tab links for smaller screens */
+    }
+
+    .tab-contents ul li {
+        font-size: 16px; /* Decrease font size for tab contents on smaller screens */
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid layout for smaller screens */
+        grid-gap: 20px; /* Reduce grid gap for smaller screens */
+    }
+
+    .work img {
+        border-radius: 8px; /* Decrease border radius for images on smaller screens */
+    }
+
+    .layer h3 {
+        font-size: 20px; /* Decrease font size for layer headings on smaller screens */
+    }
+
+    .layer a {
+        line-height: 50px; /* Adjust line height for layer links on smaller screens */
+        width: 50px; /* Decrease width of layer links on smaller screens */
+        height: 50px; /* Decrease height of layer links on smaller screens */
+        font-size: 16px; /* Decrease font size for layer links on smaller screens */
+    }
+
+    .contact ul li i {
+        margin-right: 10px; /* Reduce margin between icon and text for smaller screens */
+    }
+}
